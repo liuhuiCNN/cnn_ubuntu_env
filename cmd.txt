@@ -1,0 +1,25 @@
+sudo dpkg --get-selections > packages
+
+# Now put them back on the new distro
+[new distro] sudo dpkg --set-selections < packages
+
+[new distro] sudo apt-get dselect-upgrade
+
+
+
+
+
+dpkg --get-selections > packages.lst
+dpkg --merge-avail <(apt-cache dumpavail)
+dpkg --clear-selections
+dpkg --set-selections < packages.lst
+apt-get dselect-upgrade
+
+
+
+
+apt-mark showmanual >list-installed.txt
+
+dpkg-query -W -f='${PackageSpec} ${Status}\n' | grep installed |  sort -u | cut -f1 -d \ > installed-pkgs
+dpkg -l | grep ^ii | sed 's_  _\t_g' | cut -f 2 > installed-pkgs
+
