@@ -9,3 +9,9 @@ sudo apt-clone restore path-to/apt-clone-state-ubuntu.tar.gz
 
 sudo apt-clone restore-new-distro path-to/apt-clone-state-ubuntu.tar.gz $(lsb_release -sc)
 
+
+
+
+
+# http://ubuntuhandbook.org/index.php/2014/01/aptik-simple-tool-backup-packages-ubuntu/
+
