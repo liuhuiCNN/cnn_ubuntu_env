@@ -1,0 +1,4 @@
+not installable: lantern
+version mismatch: grub-efi-amd64-bin, appmenu-qt5, liboxideqtcore0, ubuntu-software, libgtk-3-common, liboxideqt-qmlplugin, gir1.2-gtk-3.0, liboxideqtquick0, grub-efi-amd64-signed, init, nano, libgtk-3-doc, libgtk-3-dev, libgail-3-0, firefox-locale-en, gnome-software, grub2-common, snapd, libgtk-3-bin, grub-common, gnome-software-common, libgtk-3-0, grub-efi-amd64, init-system-helpers, firefox, libgtk-3-0-dbg, oxideqt-codecs
+
+Note that you can use --with-dpkg-repack to include those packges in the clone file.

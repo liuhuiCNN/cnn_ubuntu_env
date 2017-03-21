@@ -1,0 +1,11 @@
+sudo apt-get install apt-clone
+
+# make backup
+sudo apt-clone clone path-to/apt-clone-state-ubuntu-$(lsb_release -sr)-$(date +%F).tar.gz
+
+# restore backup
+sudo apt-clone restore path-to/apt-clone-state-ubuntu.tar.gz
+
+
+sudo apt-clone restore-new-distro path-to/apt-clone-state-ubuntu.tar.gz $(lsb_release -sc)
+

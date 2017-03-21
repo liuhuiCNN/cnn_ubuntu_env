@@ -23,3 +23,8 @@ apt-mark showmanual >list-installed.txt
 dpkg-query -W -f='${PackageSpec} ${Status}\n' | grep installed |  sort -u | cut -f1 -d \ > installed-pkgs
 dpkg -l | grep ^ii | sed 's_  _\t_g' | cut -f 2 > installed-pkgs
 
+
+dpkg -l |awk '/^[hi]i/{print $2}' > 1.txt
+aptitude search -F '%p' '~i' > 1.txt
+dpkg --get-selections > 1.txt
+
